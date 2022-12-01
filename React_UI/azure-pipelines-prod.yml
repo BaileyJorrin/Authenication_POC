@@ -1,0 +1,35 @@
+jobs:
+  - job: Job_1
+    displayName: Agent job 1
+    pool:
+      vmImage: windows-2019
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '14.x'
+      displayName: 'Install Node.js'
+    - script: |
+        npm install
+      workingDirectory: $(PROJECTFOLDER)
+      displayName: 'npm install and build'
+    - task: CmdLine@2
+      inputs:
+        script: 'npx npm run build'
+        workingDirectory: '$(PROJECTFOLDER)'
+      displayName: 'npm build prod'
+    - task: CopyFiles@2
+      displayName: 'Copy Files'
+      inputs:
+        SourceFolder: '$(Build.SourcesDirectory)/$(PROJECTFOLDER)/build'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: '$(Build.BinariesDirectory)'
+        includeRootFolder: true
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
+      displayName: 'Compressing site'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        ArtifactName: 'builtReact'

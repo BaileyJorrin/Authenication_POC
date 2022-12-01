@@ -1,0 +1,1 @@
+/Users/randycostner/GitHub/Auth POC/WebAPI/.sonarqube/out/0

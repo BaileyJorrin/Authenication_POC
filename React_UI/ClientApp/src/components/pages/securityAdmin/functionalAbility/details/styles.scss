@@ -1,0 +1,29 @@
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%
+  }
+
+  .boxAndLabel {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .saveButton {
+    max-width: 200px;
+    min-width: 180px;
+    background-color: #7b9e6b;
+  }
+  
+  .cancelButton {
+    max-width: 200px;
+    min-width: 180px;
+    background-color: #646569;
+  }

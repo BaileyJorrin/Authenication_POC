@@ -1,0 +1,57 @@
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flexAddButton{
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 20px;
+}
+
+
+h1 {
+    font-weight: lighter;
+}
+
+.grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .grid2x2 > div {
+    display: inline-flex; 
+    flex-basis: calc(50% - 40px);  
+    justify-content:flex-start;
+    flex-direction: row;
+    
+  }
+  .grid2x2 > div > div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    
+  }
+  
+  .box { margin: 20px; }
+
+  .buttonGroup{
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .saveButton{
+    max-width: 200px;
+    min-width: 180px;
+    background-color: #7B9E6B;
+  }
+
+  .cancelButton{
+    max-width: 200px;
+    min-width: 180px;
+    background-color: #646569;
+  }

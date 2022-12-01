@@ -1,0 +1,151 @@
+{
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "root": true,
+    // react
+    "plugins": ["@typescript-eslint", "import"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "project": "./tsconfig.json"
+    },
+    "extends": ["plugin:import/typescript"],
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+        "node": {},
+        "typescript": {
+          "alwaysTryTypes": true,
+          "project": "./tsconfig.json"
+        }
+      }
+    },
+    "ignorePatterns": [
+      "*.js",
+      "*.d.ts",
+      "node_modules/",
+      "*.generated.ts",
+      "coverage"
+    ],
+    "rules": {
+      "indent": ["off"],
+      "@typescript-eslint/indent": ["warn", 2],
+      "quotes": [
+        "warn",
+        "double",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "comma-dangle": ["warn", "always-multiline"],
+      "comma-spacing": [
+        "warn",
+        {
+          "before": false,
+          "after": true
+        }
+      ],
+      "no-multi-spaces": [
+        "warn",
+        {
+          "ignoreEOLComments": false
+        }
+      ],
+      "array-bracket-spacing": ["warn", "never"],
+      "array-bracket-newline": ["warn", "consistent"],
+      "object-curly-spacing": ["warn", "always"],
+      "object-curly-newline": [
+        "warn",
+        {
+          "multiline": true,
+          "consistent": true
+        }
+      ],
+      "object-property-newline": [
+        "warn",
+        {
+          "allowAllPropertiesOnSameLine": true
+        }
+      ],
+      "keyword-spacing": ["warn"],
+      "brace-style": [
+        "warn",
+        "1tbs",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "space-before-blocks": ["warn"],
+      "curly": ["warn", "multi-line", "consistent"],
+      "@typescript-eslint/member-delimiter-style": ["warn"],
+      "semi": ["warn", "always"],
+      "max-len": [
+        "warn",
+        {
+          "code": 150,
+          "ignoreUrls": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreComments": true,
+          "ignoreRegExpLiterals": true
+        }
+      ],
+      "quote-props": ["warn", "consistent-as-needed"],
+      "@typescript-eslint/no-require-imports": ["warn"],
+      "import/no-extraneous-dependencies": [
+        "warn",
+        {
+          "devDependencies": ["**/test/**", "**/build-tools/**"],
+          "optionalDependencies": false,
+          "peerDependencies": true
+        }
+      ],
+      "import/no-unresolved": ["warn"],
+      "import/order": [
+        "warn",
+        {
+          "groups": ["builtin", "external"],
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ],
+      "no-duplicate-imports": ["warn"],
+      "no-shadow": ["off"],
+      "@typescript-eslint/no-shadow": ["warn"],
+      "key-spacing": ["warn"],
+      "no-multiple-empty-lines": ["warn"],
+      "@typescript-eslint/no-floating-promises": ["warn"],
+      "no-return-await": ["off"],
+      "@typescript-eslint/return-await": ["warn"],
+      "no-trailing-spaces": ["warn"],
+      "dot-notation": ["warn"],
+      "no-bitwise": ["warn"],
+      "@typescript-eslint/member-ordering": [
+        "warn",
+        {
+          "default": [
+            "public-static-field",
+            "public-static-method",
+            "protected-static-field",
+            "protected-static-method",
+            "private-static-field",
+            "private-static-method",
+            "field",
+            "constructor",
+            "method"
+          ]
+        }
+      ]
+    }
+  }
+  

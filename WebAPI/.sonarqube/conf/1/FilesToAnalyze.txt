@@ -1,0 +1,2 @@
+﻿/Users/randycostner/GitHub/Auth POC/WebAPI/Kingsmen.CoreServices/Interfaces/ILoggingService.cs
+/Users/randycostner/GitHub/Auth POC/WebAPI/Kingsmen.CoreServices/Services/LoggingService.cs

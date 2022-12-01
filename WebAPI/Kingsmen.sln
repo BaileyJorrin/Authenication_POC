@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kingsmen.CoreServices", "Kingsmen.CoreServices\Kingsmen.CoreServices.csproj", "{B64A5C04-BFD0-452A-8432-5DA6F8977B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kingsmen.Domain", "Kingsmen.Domain\Kingsmen.Domain.csproj", "{15EABE07-A675-4376-9C24-D6F74ABBEE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kingsmen.Infrastructure", "Kingsmen.Infrastructure\Kingsmen.Infrastructure.csproj", "{F9B478E1-8863-4145-9F54-B9D52D8DB3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kingsmen.WebApi", "Kingsmen.WebApi\Kingsmen.WebApi.csproj", "{8F9CCC5C-CA07-4F4B-BF40-E4072A1816D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DAFCD28-C4ED-49FF-9013-07A25D7A37C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAFCD28-C4ED-49FF-9013-07A25D7A37C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAFCD28-C4ED-49FF-9013-07A25D7A37C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAFCD28-C4ED-49FF-9013-07A25D7A37C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{174F4BAF-EB8E-4638-B434-D883FF0873E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{174F4BAF-EB8E-4638-B434-D883FF0873E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{174F4BAF-EB8E-4638-B434-D883FF0873E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{174F4BAF-EB8E-4638-B434-D883FF0873E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64A5C04-BFD0-452A-8432-5DA6F8977B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64A5C04-BFD0-452A-8432-5DA6F8977B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64A5C04-BFD0-452A-8432-5DA6F8977B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64A5C04-BFD0-452A-8432-5DA6F8977B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15EABE07-A675-4376-9C24-D6F74ABBEE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EABE07-A675-4376-9C24-D6F74ABBEE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EABE07-A675-4376-9C24-D6F74ABBEE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EABE07-A675-4376-9C24-D6F74ABBEE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B478E1-8863-4145-9F54-B9D52D8DB3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B478E1-8863-4145-9F54-B9D52D8DB3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B478E1-8863-4145-9F54-B9D52D8DB3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B478E1-8863-4145-9F54-B9D52D8DB3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9CCC5C-CA07-4F4B-BF40-E4072A1816D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9CCC5C-CA07-4F4B-BF40-E4072A1816D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9CCC5C-CA07-4F4B-BF40-E4072A1816D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9CCC5C-CA07-4F4B-BF40-E4072A1816D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E670DD3-5D08-43DA-96F1-259F9AC9A8A1}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 80
+		$2.TabsToSpaces = True
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.inheritsSet = null
+		$4.scope = text/x-vs
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = text/x-json
+		$0.StandardHeader = $6
+	EndGlobalSection
+EndGlobal
