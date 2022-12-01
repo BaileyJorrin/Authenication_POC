@@ -13,16 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-      - name: Initialize CodeQL
+        
+        - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
           languages: javascript
@@ -33,3 +25,11 @@ jobs:
 
         - name: Perform CodeQL Analysis
           uses: github/codeql-action/analyze@v2
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
