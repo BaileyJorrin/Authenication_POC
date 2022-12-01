@@ -21,3 +21,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+        languages: javascript
+
+        - run: |
+          make bootstrap
+          make release
+
+        - name: Perform CodeQL Analysis
+          uses: github/codeql-action/analyze@v2
