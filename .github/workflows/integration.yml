@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master","Test" ]
   pull_request:
     branches: [ "master" ]
 
@@ -22,7 +22,7 @@ jobs:
     
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world
 
       - name: Run a multi-line script
         run: |
@@ -45,4 +45,4 @@ jobs:
           SLACK_BOT_TOKEN: ${{secrets.SLACK_BOT_TOKEN}}
         uses: abinoda/slack-action@master
         with:
-          args: '{\"channel\":\"C04D72G4ZDL\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Pull Request:* ${{ github.event.pull_request.title }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Who?:* ${{ github.event.pull_request.user.login }}\n*Request State:* ${{ github.event.pull_request.state }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"<${{ github.event.pull_request.html_url }}|View Pull Request>\"}}]}'
+          args: '{\"channel\":\"C04D72G4ZDL\",\"blocks\":[{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Pull Request:* ${{ github.event.push.commit.message }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"*Who?:* ${{ github.event.pull_request.user.login }}\n*Request State:* ${{ github.event.pull_request.state }}\"}},{\"type\":\"section\",\"text\":{\"type\":\"mrkdwn\",\"text\":\"<${{ github.event.pull_request.html_url }}|View Pull Request>\"}}]}'
