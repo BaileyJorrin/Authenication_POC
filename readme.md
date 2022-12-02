@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-This project is a template for
+This project is a template for:
 
 * Settup up AD Authenication beside a custom Authenication provider
 * Retrieving Azure AD users in C# code (_Process is different for a on premise AD deployment_)
