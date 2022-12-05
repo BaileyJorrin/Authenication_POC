@@ -51,13 +51,13 @@ const ClientDetails = () => {
   const userName = accounts[0] && accounts[0].username;
 
   /* REDUX STATE MANAGEMENT */
-  const dispatch = useAppDispatch();
-  const client = useAppSelector(selectDetailsClient);
-  const severity = useAppSelector(selectToastSeverity);
-  const selectedClient = useAppSelector(selectClient);
-  const canEdit = (): boolean => {
-    return useAppSelector(state => selectCanAdd(state, ScreenControlPoints.Client));
-  };
+  // const dispatch = useAppDispatch();
+  // const client = useAppSelector(selectDetailsClient);
+  // const severity = useAppSelector(selectToastSeverity);
+  // const selectedClient = useAppSelector(selectClient);
+  // const canEdit = (): boolean => {
+  //   return useAppSelector(state => selectCanAdd(state, ScreenControlPoints.Client));
+  // };
 
 
   useEffect(() => {
