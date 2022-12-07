@@ -1,4 +1,1 @@
-let x=" 1kasfgdsabfhajk.afn"
-{{
-    
-}}
+document.write(window.location.search);
