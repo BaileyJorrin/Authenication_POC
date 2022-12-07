@@ -37,7 +37,6 @@ jobs:
         run: |
           npm install eslint@8.10.0
           npm install @microsoft/eslint-formatter-sarif@2.1.7
-          git update-index --chmod=+x ./.github/scripts/xxx.sh
 
       - name: Run ESLint
         run: sudo npx eslint .
