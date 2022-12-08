@@ -1,4 +1,4 @@
-name: CI
+name: Slack Connecter
 
 on:
   pull_request:
