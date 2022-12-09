@@ -2,7 +2,9 @@ name: UI build
 
 on:
   pull_request:
-    branches: [ "master" ]
+    branches: [ 'master' ]
+    type: 
+      -closed
 
 jobs:
   build:
