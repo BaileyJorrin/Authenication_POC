@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [ 'master' ]
     paths: 'React_UI/**'
-     types:
+    types:
       - opened
 
 jobs:
