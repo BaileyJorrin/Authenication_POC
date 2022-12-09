@@ -4,9 +4,6 @@ on:
   pull_request:
     branches: [ 'master' ]
     path: 'React_UI/**'
-    types: 
-      -closed
-
 jobs:
   build:
     if: github.event.pull_request.merged == true
