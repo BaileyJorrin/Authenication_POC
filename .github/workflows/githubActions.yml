@@ -1,0 +1,17 @@
+name: UI build
+
+on:
+  pull_request:
+    branches: [ 'master' ]
+    path: 'React_UI'
+  push:
+    branches: [ 'Test' ]
+    path: 'React_UI'
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      run: echo: "Works"
+
+
