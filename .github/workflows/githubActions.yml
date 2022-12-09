@@ -4,13 +4,18 @@ on:
   pull_request:
     branches: [ 'master' ]
     path: 'React_UI'
-  push:
-    branches: [ 'Test' ]
-    path: 'React_UI'
-jobs: 
+    types: 
+      -closed
+
+jobs:
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build Frontend
-      run: echo "Works"
+    - name: npm install
+      run: npm install
+
+    - name: npm run build
+      workingDirectory: 'React_UI'
+      run: npm run build
