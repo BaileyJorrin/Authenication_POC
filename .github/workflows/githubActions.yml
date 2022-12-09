@@ -2,7 +2,10 @@ name: UI build
 
 on:
   pull_request:
-    branches: [ "master" ]
+    branches: [ 'master' ]
+    path: 'React_UI/'
+    type: 
+      -closed
 
 jobs:
   build:
