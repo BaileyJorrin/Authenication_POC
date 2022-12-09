@@ -15,7 +15,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: npm install
       run: npm install
+      with:
+        workingDirectory: React_UI
 
-    - name: npm run build
-      workingDirectory: ./React_UI
-      run: npm run build
+    # - name: npm run build
+    #   run: npm run build
