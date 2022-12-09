@@ -3,7 +3,7 @@ name: UI build
 on:
   pull_request:
     branches: [ 'master' ]
-    path: 'React_UI'
+    path: ./React_UI
     types: 
       -closed
 
@@ -17,5 +17,5 @@ jobs:
       run: npm install
 
     - name: npm run build
-      workingDirectory: 'React_UI'
+      workingDirectory: ./React_UI
       run: npm run build
