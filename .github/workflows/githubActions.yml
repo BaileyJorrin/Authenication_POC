@@ -3,7 +3,10 @@ name: UI build
 on:
   pull_request:
     branches: [ 'master' ]
-    path: 'React_UI/**'
+    paths: 'React_UI/**'
+     types:
+      - opened
+
 jobs:
   build:
     if: github.event.pull_request.merged == true
