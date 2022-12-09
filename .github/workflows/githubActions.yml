@@ -3,6 +3,7 @@ name: UI build
 on:
   pull_request:
     branches: [ 'master' ]
+    path: 'React_UI/'
     type: 
       -closed
 
