@@ -1,13 +1,12 @@
 name: UI build
 
 on:
-  # pull_request:
-  #   branches: [ 'master' ]
-  #   paths: 'React_UI/**'
-  #   types:
-  #     - opened
-  push: 
-    branches: ['Test']
+  pull_request:
+    branches: [ 'master' ]
+    paths: 'React_UI/**'
+    types:
+      - closed
+
 
 jobs:
   build:
@@ -16,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: npm install
-      working-directory: ./React_UI
-      run: npm install
-    # - name: npm run build
-    #   run: npm run build
+      working-directory: ./React_UI/ClientApp
+      run: | 
+      npm install
+      npm run build
