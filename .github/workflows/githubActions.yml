@@ -5,7 +5,8 @@ on:
     branches: [ 'master' ]
     paths: 'React_UI/**'
     types:
-      - opened
+      - closed
+
 
 jobs:
   build:
@@ -14,8 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: npm install
-      run: npm install
-
-    - name: npm run build
-      workingDirectory: ./React_UI
-      run: npm run build
+      working-directory: ./React_UI/ClientApp
+      run: | 
+        npm install
+        npm run build
