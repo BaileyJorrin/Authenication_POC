@@ -1,0 +1,21 @@
+name: UI build
+
+on:
+  pull_request:
+    branches: [ 'master' ]
+    path: 'React_UI'
+    types: 
+      -closed
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: npm install
+      run: npm install
+
+    - name: npm run build
+      workingDirectory: 'React_UI'
+      run: npm run build
