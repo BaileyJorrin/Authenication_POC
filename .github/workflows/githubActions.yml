@@ -1,11 +1,13 @@
 name: UI build
 
 on:
-  pull_request:
-    branches: [ 'master' ]
-    paths: 'React_UI/**'
-    types:
-      - opened
+  # pull_request:
+  #   branches: [ 'master' ]
+  #   paths: 'React_UI/**'
+  #   types:
+  #     - opened
+  push: 
+    branches: ['Test']
 
 jobs:
   build:
