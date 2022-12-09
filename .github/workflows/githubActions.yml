@@ -17,5 +17,5 @@ jobs:
     - name: npm install
       working-directory: ./React_UI/ClientApp
       run: | 
-      npm install
-      npm run build
+        npm install
+        npm run build
