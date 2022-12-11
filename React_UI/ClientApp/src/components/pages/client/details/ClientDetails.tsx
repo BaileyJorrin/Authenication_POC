@@ -43,7 +43,11 @@ import "./client-details.scss";
 import { selectCanAdd } from "../../../common/reduxSlices/permissionSlice";
 
 const ClientDetails = () => {
- return x =35
+ return (
+  < <section className="client-details">
+  <h1 style={{ fontWeight: "lighter" }}>Client Details</h1>
+  <hr />
+  </section>
 };
 
 export default ClientDetails;
