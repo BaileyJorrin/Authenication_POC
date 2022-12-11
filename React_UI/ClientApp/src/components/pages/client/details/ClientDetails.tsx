@@ -44,10 +44,10 @@ import { selectCanAdd } from "../../../common/reduxSlices/permissionSlice";
 
 const ClientDetails = () => {
  return (
-  < <section className="client-details">
+<section className="client-details">
   <h1 style={{ fontWeight: "lighter" }}>Client Details</h1>
   <hr />
-  </section>
+  </section>)
 };
 
 export default ClientDetails;
