@@ -41,3 +41,9 @@ import "./client-details.scss";
 
 // Models
 import { selectCanAdd } from "../../../common/reduxSlices/permissionSlice";
+
+const ClientDetails = () => {
+ 
+};
+
+export default ClientDetails;
