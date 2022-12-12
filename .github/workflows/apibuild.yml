@@ -11,6 +11,9 @@ on:
   #     - closed
   push: 
     branches: ["Test"]
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
