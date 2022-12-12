@@ -19,7 +19,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Set up .NET Core
-        working-directory: ./WebAPI
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
@@ -33,4 +32,5 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
+        working-directory: ./WebAPI
         run: dotnet build --configuration Release
