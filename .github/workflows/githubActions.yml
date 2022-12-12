@@ -22,7 +22,7 @@ jobs:
       working-directory: ./React_UI/ClientApp
       run: npm run build
 
-    - name: Notify slack success
+      - name: Notify slack success
       if: success()
       env:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
