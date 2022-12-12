@@ -1,0 +1,36 @@
+name: Build and Api
+
+env:
+  DOTNET_VERSION: '5'
+
+on:
+  # pull_request:
+  #   branches: [ 'master' ]
+  #   paths: 'React_UI/**'
+  #   types:
+  #     - closed
+  push: 
+    branches: ["Test"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up .NET Core
+        working-directory: ./WebAPI
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Set up dependency caching for faster builds
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Build with dotnet
+        run: dotnet build --configuration Release
