@@ -1,4 +1,4 @@
-name: Build and Api
+name: Build Api
 
 env:
   DOTNET_VERSION: '7.0'
@@ -9,9 +9,6 @@ on:
     paths: 'WebAPI/**'
     types:
       - closed
-
-  push:
-    branches: [ 'Test' ]
 
 jobs:
   build:
