@@ -21,14 +21,14 @@ jobs:
         npm run build
     
     - name: Notify slack success
-        if: success()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1
-        with:
-          channel_id: C04D72G4ZDL
-          status: SUCCESS
-          color: good
+      if: success()
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      uses: voxmedia/github-action-slack-notify-build@v1
+      with:
+        channel_id: C04D72G4ZDL
+        status: SUCCESS
+        color: good
 
       - name: Notify slack fail
         if: failure()
