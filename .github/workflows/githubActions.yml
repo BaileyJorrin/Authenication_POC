@@ -13,24 +13,24 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: npm install
-      working-directory: ./React_UI/ClientApp
-      run: npm install
+      - uses: actions/checkout@v3
+      - name: npm install
+        working-directory: ./React_UI/ClientApp
+        run: npm install
 
-    - name: npm run build
+      - name: npm run build
       working-directory: ./React_UI/ClientApp
       run: npm run build
 
       - name: Notify slack success
-      if: success()
-      env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-      uses: voxmedia/github-action-slack-notify-build@v1
-      with:
-        channel_id: C04D72G4ZDL
-        status: SUCCESS
-        color: good
+        if: success()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: C04D72G4ZDL
+          status: SUCCESS
+          color: good
 
       - name: Notify slack fail
         if: failure()
