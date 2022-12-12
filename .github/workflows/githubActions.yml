@@ -13,14 +13,14 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: npm install
-      working-directory: ./React_UI/ClientApp
-      run: | 
-        npm install
-        npm run build
-    
-    - name: Notify slack success
+      - uses: actions/checkout@v3
+      - name: npm install
+        working-directory: ./React_UI/ClientApp
+        run: | 
+          npm install
+          npm run build
+
+      - name: Notify slack success
         if: success()
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

@@ -1,4 +1,4 @@
-name: Build Api
+name: Api Build
 
 env:
   DOTNET_VERSION: '7.0'
