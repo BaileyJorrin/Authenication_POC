@@ -4,15 +4,14 @@ env:
   DOTNET_VERSION: '7.0'
 
 on:
-  # pull_request:
-  #   branches: [ 'master' ]
-  #   paths: 'React_UI/**'
-  #   types:
-  #     - closed
-  push: 
-    branches: ["Test"]
-permissions:
-  contents: read
+  pull_request:
+    branches: [ 'master' ]
+    paths: 'WebAPI/**'
+    types:
+      - closed
+
+  push:
+    branches: [ 'Test' ]
 
 jobs:
   build:
@@ -37,3 +36,23 @@ jobs:
       - name: Build with dotnet
         working-directory: ./WebAPI
         run: dotnet build --configuration Release
+
+      - name: Notify slack success
+        if: success()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: C04D72G4ZDL
+          status: SUCCESS
+          color: good
+
+      - name: Notify slack fail
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: C04D72G4ZDL
+          status: FAILED
+          color: danger
