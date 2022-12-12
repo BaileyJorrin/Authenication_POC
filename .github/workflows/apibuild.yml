@@ -1,7 +1,7 @@
 name: Build and Api
 
 env:
-  DOTNET_VERSION: '1'
+  DOTNET_VERSION: '1.2'
 
 on:
   # pull_request:
