@@ -9,7 +9,7 @@ import {
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { format } from "date-fns";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 
 interface UserDetailsProps {
   id: string;

@@ -6,7 +6,7 @@ import {
 } from "@reduxjs/toolkit";
 import UserApi from "../../../../../apis/implementations/UserApi";
 import IUserApi from "../../../../../apis/interfaces/IUserApi";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 import AppStatus from "../../../../../models/helpers/AppStatus";
 import { createNewUser } from "../../../../../models/helpers/entityHelpers/userHelper";
 
@@ -35,7 +35,7 @@ const initialState: userstate = {
 };
 
 export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
-  const response = await userApi.getAllWithTeamMembers();
+  const response = await userApi.getAll();
   response.forEach((c: User) => {
     c.createDateTime = new Date(c.createDateTime);
     c.createDateTime.setHours(0, 0, 0, 0);

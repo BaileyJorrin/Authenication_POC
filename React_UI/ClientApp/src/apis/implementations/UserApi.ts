@@ -10,8 +10,8 @@ class UserApi extends BaseDataApi implements IUserApi {
     super("Users");
   }
 
-  public getAllWithTeamMembers = async (): Promise<any> => {
-    const response = await fetch(`${process.env.REACT_APP_API_STRING}/api/${this.endpointName}/getAllWithTeamMembers/`, {
+  public getAll = async (): Promise<any> => {
+    const response = await fetch(`${process.env.REACT_APP_API_STRING}/api/${this.endpointName}/getAll`, {
       headers: {
         Authorization: `Bearer ${sessionStorage.getItem("idToken")}`,
       },
@@ -50,7 +50,6 @@ class UserApi extends BaseDataApi implements IUserApi {
   };
 
   public retrievePermissions = async (userName: string): Promise<any> => {
-
     const serverName :string = protectedEndpoints.demoApi.endpoint ?? "";
     const urlprefix: string = serverName + "/api/Users/GetUserPermissions?userName=" + userName;
 
@@ -78,7 +77,7 @@ class UserApi extends BaseDataApi implements IUserApi {
 
 
   public loadGrid(): Promise<any> {
-    return this.getAllWithTeamMembers();
+    return this.getAll();
   }
 }
 
