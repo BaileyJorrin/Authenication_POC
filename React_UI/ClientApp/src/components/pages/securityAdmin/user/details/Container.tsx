@@ -4,7 +4,7 @@ import * as React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import UserApi from "../../../../../apis/implementations/UserApi";
 import IUserApi from "../../../../../apis/interfaces/IUserApi";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 import { createNewUser } from "../../../../../models/helpers/entityHelpers/userHelper";
 import { IdParameter } from "../../../../../models/parameters/idParameter";
 import { useAppDispatch } from "../../../../../redux/hooks";

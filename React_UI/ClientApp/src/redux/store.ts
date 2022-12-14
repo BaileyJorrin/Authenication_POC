@@ -10,8 +10,6 @@ import clientReducer from "../components/pages/client/reduxSlices/clientsSlice";
 import userGridReducer from "../components/pages/securityAdmin/user/reduxSlices/userGridSlice";
 import userReducer from "../components/pages/securityAdmin/user/reduxSlices/userSlice";
 
-import { loadState } from "./persistance";
-
 export const store = configureStore({
   reducer: {
     client: clientReducer,
@@ -26,7 +24,6 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
     }),
-  preloadedState: loadState(),
 });
 
 export type AppDispatch = typeof store.dispatch;

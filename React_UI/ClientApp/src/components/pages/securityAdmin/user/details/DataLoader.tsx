@@ -4,7 +4,7 @@ import RoleApi from "../../../../../apis/implementations/RoleApi";
 import UserApi from "../../../../../apis/implementations/UserApi";
 import IRoleApi from "../../../../../apis/interfaces/IRoleApi";
 import IUserApi from "../../../../../apis/interfaces/IUserApi";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 
 interface UserLoaderProps {
   id: string;

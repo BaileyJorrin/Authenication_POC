@@ -10,7 +10,6 @@ import React from "react";
 import userAPI from "../../apis/implementations/UserApi";
 import { loginRequest } from "../../authConfig";
 import { useAppDispatch } from "../../redux/hooks";
-import { clearState } from "../../redux/persistance";
 import { setAuthenticatedUser } from "../common/reduxSlices/AuthenicatedUserSlice";
 import { assignPermissions, assignRoles } from "../common/reduxSlices/permissionSlice";
 // import { Button, Card, CardBody, CardTitle } from "reactstrap";
@@ -25,6 +24,7 @@ export const LogIn = () => {
 
   function handleLogin() {
     instance.loginPopup(loginRequest).then((response:any) => {
+      sessionStorage.setItem("idToken", response.idToken);
       populatePermissions(response.account.username);
       populateRoles(response.account.username);
     },
@@ -55,7 +55,7 @@ export const LogIn = () => {
     );
 
     const data = await response.json();
-    //sessionStorage.setItem("user", JSON.stringify(data));
+
     dispatch(setAuthenticatedUser(data));
     sessionStorage.setItem("idToken", data.token);
     populatePermissions(data.username);

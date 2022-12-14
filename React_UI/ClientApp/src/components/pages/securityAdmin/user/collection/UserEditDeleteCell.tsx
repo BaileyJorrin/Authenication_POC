@@ -3,7 +3,7 @@ import { useMsal } from "@azure/msal-react";
 import { Box, Button, Modal, Typography } from "@mui/material";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 import { useAppDispatch, useAppSelector } from "../../../../../redux/hooks";
 import { pushToast } from "../../../../common/reduxSlices/toastSlice";
 import { update, selectGrid } from "../reduxSlices/userGridSlice";

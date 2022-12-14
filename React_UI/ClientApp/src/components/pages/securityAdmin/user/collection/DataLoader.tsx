@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import UserApi from "../../../../../apis/implementations/UserApi";
 import IUserApi from "../../../../../apis/interfaces/IUserApi";
-import { User } from "../../../../../models/entities/user";
+import { User } from "../../../../../models/entities/User";
 
 interface UserLoaderProps{
   onDataReceived: (Users: DataResult) => void;

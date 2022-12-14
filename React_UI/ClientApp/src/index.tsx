@@ -11,17 +11,12 @@ import App from "./App";
 //Authentication Imports
 import { msalConfig } from "./authConfig";
 //Redux Imports
-import { saveState } from "./redux/persistance";
 import { store } from "./redux/store";
 
-import registerServiceWorker from "./registerServiceWorker";
+//import registerServiceWorker from "./registerServiceWorker";
 const msalInstance = new PublicClientApplication(msalConfig as Configuration);
 const baseUrl = document.getElementsByTagName("base")[0].getAttribute("href") as string;
 const rootElement = document.getElementById("root");
-
-store.subscribe(
-  debounce(() => {saveState(store.getState());}, 1000),
-);
 
 ReactDOM.render(
 
